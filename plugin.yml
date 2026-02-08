@@ -1,0 +1,31 @@
+name: CoomCore
+main: src\PocketMine
+version: 1.0.0
+api: 5.0.0
+author: CoomDev
+website: https://coomwix.ru
+
+description: |
+  Custom Bedrock Edition server core with:
+  - Custom world generation
+  - Advanced entity animations
+  - Protocol 1.20.x - 1.21.132 support
+  - MCPEhost compatibility
+
+load: STARTUP
+
+server:
+  name: "CoomCore Server"
+  port: 19132
+  max-players: 50
+  gamemode: 0
+  difficulty: 2
+  view-distance: 8
+  
+permissions:
+  coomcore.command:
+    default: op
+    children:
+      coomcore.command.reload: true
+      coomcore.command.stop: true
+      coomcore.command.plugins: true
